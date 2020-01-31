@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>English</title>
+
+	
+
+	<style>
+	.palavra {
+		background-color: green;
+		text-align:center;
+	}
+
+	.borda {
+	   border: 5px solid red;
+	   border-color: red;	
+	   height: 90%;	
+	}
+
+	.botao {
+		display: block;
+		margin: auto;
+		border: 1px solid black;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.botao:hover { 
+		border: 2px solid black;
+		background-color: green;
+
+	}
+
+	</style>
+
+	<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+
+	<script src="jquery-3.4.1.min.js"> </script>
+
+
+</head>
+ 
+<body>
+<p id="demo"></p>
+
+<div class="palavra">
+	<p>Red</p>
+</div>
+<div class="borda">
+	
+	<div id="botao1" class="botao">
+ 		null
+ 	</div>
+
+ 	<div id="botao2" class="botao">
+ 		null
+ 	</div>
+
+ 	 <div id="botao3" class="botao">
+ 		null
+ 	</div>
+
+ 	 <div id="botao4" class="botao">
+ 		null
+ 	</div>
+
+</div>
+
+
+	<script>
+    //Array 
+
+    let palavras = [{palavraIngles:'Red', traducao:"Vermelho"}, 
+    				{palavraIngles:'Blue', traducao:"Azul"},
+    				{palavraIngles:'Green', traducao:"Verde"},
+    				{palavraIngles:'White', traducao:"Branco"}
+
+    			   ];
+	var text = "";
+	var i;
+	for (i = 0; i < palavras.length; i++) {
+
+	 text = palavras[i];
+ 	 document.getElementById("botao" + (i+1)).innerHTML = text.traducao;
+	}
+	
+
+	//jQuery
+  	$(document).ready(function(){
+  		
+  		$("#botao1").click(function(){
+    		//alert("Parabéns você acertou");
+		document.getElementById("botao1").innerHTML = "TESTESTE!";
+ 		 });
+	});
+     
+
+	</script>
+ 
+</body>
+</html>
